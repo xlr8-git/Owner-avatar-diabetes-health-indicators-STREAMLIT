@@ -15,7 +15,7 @@ model_features = pipeline['features']
 # -------------------------------
 # Streamlit App
 # -------------------------------
-st.title("Health Risk Prediction App")
+st.title("Diabetes Health Indicators App")
 
 st.header("Enter your details:")
 
@@ -120,11 +120,9 @@ if st.button("Predict Health Risk"):
 
         # Interpret the prediction
         if prediction == 0:
-            st.success("You are at **low health risk**. Maintain a balanced diet and regular physical activity.")
-        elif prediction == 1:
-            st.warning("You are at **moderate health risk**. Consider improving lifestyle habits and regular checkups.")
+            st.success("You are at **LOW Diabetes health risk**. Maintain a balanced diet and regular physical activity.")
         else:
-            st.error("You are at **high health risk**. It is recommended to consult a healthcare professional immediately.")
+            st.error("You are at **high Diabetes health risk**. It is recommended to consult a healthcare professional immediately.")
 
     except Exception as e:
         st.error(f"Prediction Error: {e}")
